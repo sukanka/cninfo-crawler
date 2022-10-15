@@ -4,7 +4,7 @@ import re
 from datetime import datetime
 from src.download_file import get_announce_urls
 
-df = pandas.read_excel("aux/并购公告下载.xls")
+df = pandas.read_excel("auxiliary/并购公告下载.xls")
 
 
 def buyer2stockid(s: str) -> str:

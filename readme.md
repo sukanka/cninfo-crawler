@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ### 用法
 
-读取 `aux/并购公告下载.xls` 的每一行并根据 `'序号', 'stockid', "首次披露日"` 下载`首次披露日`的公告。
+读取 `auxiliary/并购公告下载.xls` 的每一行并根据 `'序号', 'stockid', "首次披露日"` 下载`首次披露日`的公告。
 
 从序号等于 `start` 开始下载，不输入 `start` 时默认下载所有 (`start=0`)。会自动跳过已经下载的文件
 
