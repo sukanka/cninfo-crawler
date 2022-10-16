@@ -8,7 +8,7 @@ df = pandas.read_excel("auxiliary/并购公告下载.xls")
 
 
 def buyer2stockid(s: str) -> str:
-    z = re.search(r'\d+', s).group()
+    z = re.search(r'(\d+)\.(SH|SZ)', s).groups()[0]
     return z
 
 
