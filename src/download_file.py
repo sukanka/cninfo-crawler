@@ -48,8 +48,9 @@ class DownloadMeta:
         '''
         return s
     def download(self, dir="assets") -> None:
-        file_name = "{}-{}-{}-{} to {}-{}.pdf".format(
-            self.prefix, self.name, self.stockid, self.start_date, self.end_date, self.title)
+        ext=self.url.split('.')[-1]
+        file_name = "{}-{}-{}-{} to {}-{}.{}".format(
+            self.prefix, self.name, self.stockid, self.start_date, self.end_date, self.title,ext)
         download_path = os.path.join(dir, file_name)
         file = r.get(self.url, allow_redirects=True)
         if file.status_code != 200:
